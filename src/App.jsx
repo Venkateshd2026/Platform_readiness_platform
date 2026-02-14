@@ -15,7 +15,7 @@ import Proof from './pages/Proof';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Platform_readiness_platform">
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/prp/07-test" element={<TestChecklist />} />
