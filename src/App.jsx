@@ -14,8 +14,9 @@ import Ship from './pages/Ship';
 import Proof from './pages/Proof';
 
 export default function App() {
+  const basename = import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL.replace(/\/$/, '')
   return (
-    <BrowserRouter basename="/Platform_readiness_platform">
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/prp/07-test" element={<TestChecklist />} />

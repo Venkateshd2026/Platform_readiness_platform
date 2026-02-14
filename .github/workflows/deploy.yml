@@ -31,6 +31,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_BASE_PATH: '/Platform_readiness_platform/'
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
