@@ -1,11 +1,45 @@
 @import "tailwindcss";
 
+/* Replaced all blue with hover red #A00000 - no blue remains */
 @theme {
-  --color-primary: hsl(245, 58%, 51%);
-  --color-primary-hover: hsl(245, 58%, 45%);
-  --color-primary-light: hsl(245, 58%, 95%);
+  --color-primary: #A00000;
+  --color-primary-hover: #A00000;
+  --color-primary-light: rgba(160, 0, 0, 0.1);
 }
 
 body {
   @apply antialiased text-gray-900 bg-gray-50;
+}
+
+/* Override any primary usage to ensure no blue */
+.text-primary {
+  color: #A00000 !important;
+}
+
+.bg-primary {
+  background-color: #A00000 !important;
+}
+
+.btn-primary {
+  background-color: #A00000 !important;
+  border-color: #A00000 !important;
+  color: white !important;
+}
+
+.btn-primary:hover,
+button:hover[class*="primary"] {
+  background-color: #A00000 !important;
+  border-color: #A00000 !important;
+}
+
+a:hover {
+  color: #A00000;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #A00000;
+  box-shadow: 0 0 5px rgba(160, 0, 0, 0.4);
 }
